@@ -17,7 +17,9 @@ Public Class Form1
         Dim landNaam As String = cboLand.SelectedItem
         txtData.Clear()
         cboDatums.Items.Clear()
-        cboDatums.Enabled = True
+        cboDatums.ResetText()
+        cboDatums.Visible = True
+
         For Each item As Object In dict
             If item("country").ToString = landNaam Then
                 Dim data As JsonArray = item("data")
@@ -93,9 +95,14 @@ Public Class Form1
 
     End Sub
     Sub clearAllData()
+        cboLand.ResetText()
         txtData.Clear()
         landen.Clear()
         datums.Clear()
+        cboLand.Items.Clear()
+        cboDatums.Items.Clear()
+        cboDatums.ResetText()
+        cboDatums.Visible = False
     End Sub
     Sub fillLanden(ByVal array As ArrayList)
         For i = 0 To array.Count - 1
@@ -107,5 +114,14 @@ Public Class Form1
             cboDatums.Items.Add(array(i))
         Next
         cboDatums.Visible = True
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnHerlezen_Click(sender As Object, e As EventArgs) Handles btnHerlezen.Click
+        clearAllData()
+        loadCoronaData()
     End Sub
 End Class

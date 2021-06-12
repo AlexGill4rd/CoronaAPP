@@ -62,7 +62,6 @@ Partial Class Form1
         '
         'cboDatums
         '
-        Me.cboDatums.Enabled = False
         Me.cboDatums.FormattingEnabled = True
         Me.cboDatums.Location = New System.Drawing.Point(12, 41)
         Me.cboDatums.Name = "cboDatums"

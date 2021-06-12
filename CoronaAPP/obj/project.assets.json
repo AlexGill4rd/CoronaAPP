@@ -5609,11 +5609,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex Gillard\\source\\repos\\CoronaAPP\\CoronaAPP\\CoronaAPP.vbproj",
+      "projectUniqueName": "C:\\Users\\Alex Gillard\\Desktop\\Github\\CoronaAPP\\CoronaAPP\\CoronaAPP.vbproj",
       "projectName": "CoronaAPP",
-      "projectPath": "C:\\Users\\Alex Gillard\\source\\repos\\CoronaAPP\\CoronaAPP\\CoronaAPP.vbproj",
+      "projectPath": "C:\\Users\\Alex Gillard\\Desktop\\Github\\CoronaAPP\\CoronaAPP\\CoronaAPP.vbproj",
       "packagesPath": "C:\\Users\\Alex Gillard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex Gillard\\source\\repos\\CoronaAPP\\CoronaAPP\\obj\\",
+      "outputPath": "C:\\Users\\Alex Gillard\\Desktop\\Github\\CoronaAPP\\CoronaAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
