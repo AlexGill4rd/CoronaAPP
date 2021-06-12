@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,20 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnHerlezen = New System.Windows.Forms.Button()
         Me.cboLand = New System.Windows.Forms.ComboBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.dlgOpenen = New System.Windows.Forms.OpenFileDialog()
         Me.cboDatums = New System.Windows.Forms.ComboBox()
         Me.txtData = New System.Windows.Forms.TextBox()
+        Me.ttClose = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttHerlezen = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttLand = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttDatum = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttInfo = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'btnHerlezen
@@ -37,6 +43,7 @@ Partial Class Form1
         Me.btnHerlezen.Size = New System.Drawing.Size(145, 23)
         Me.btnHerlezen.TabIndex = 0
         Me.btnHerlezen.Text = "Herlezen"
+        Me.ttHerlezen.SetToolTip(Me.btnHerlezen, "Herlaadt de informatie van het programma")
         Me.btnHerlezen.UseVisualStyleBackColor = True
         '
         'cboLand
@@ -46,6 +53,7 @@ Partial Class Form1
         Me.cboLand.Name = "cboLand"
         Me.cboLand.Size = New System.Drawing.Size(145, 23)
         Me.cboLand.TabIndex = 1
+        Me.ttLand.SetToolTip(Me.cboLand, "Pas hier het land aan")
         '
         'btnClose
         '
@@ -54,6 +62,7 @@ Partial Class Form1
         Me.btnClose.Size = New System.Drawing.Size(145, 23)
         Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "Sluiten"
+        Me.ttClose.SetToolTip(Me.btnClose, "Sluit het programma af")
         Me.btnClose.UseVisualStyleBackColor = True
         '
         'dlgOpenen
@@ -67,6 +76,7 @@ Partial Class Form1
         Me.cboDatums.Name = "cboDatums"
         Me.cboDatums.Size = New System.Drawing.Size(145, 23)
         Me.cboDatums.TabIndex = 4
+        Me.ttDatum.SetToolTip(Me.cboDatums, "Pas de datum voor de informatie aan")
         '
         'txtData
         '
@@ -76,6 +86,7 @@ Partial Class Form1
         Me.txtData.Name = "txtData"
         Me.txtData.Size = New System.Drawing.Size(250, 162)
         Me.txtData.TabIndex = 5
+        Me.ttInfo.SetToolTip(Me.txtData, "Krijg meer informatie over het geselecteerde land te zien")
         '
         'Form1
         '
@@ -90,7 +101,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Corona Data"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -102,4 +113,9 @@ Partial Class Form1
     Friend WithEvents dlgOpenen As OpenFileDialog
     Friend WithEvents cboDatums As ComboBox
     Friend WithEvents txtData As TextBox
+    Friend WithEvents ttClose As ToolTip
+    Friend WithEvents ttLand As ToolTip
+    Friend WithEvents ttDatum As ToolTip
+    Friend WithEvents ttInfo As ToolTip
+    Friend WithEvents ttHerlezen As ToolTip
 End Class

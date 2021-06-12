@@ -9,9 +9,7 @@ Public Class Form1
     Dim dict As Object
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         loadCoronaData()
-
     End Sub
     Private Sub cboLand_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLand.SelectedIndexChanged
         Dim landNaam As String = cboLand.SelectedItem
@@ -43,27 +41,27 @@ Public Class Form1
                 For Each it As Object In array
                     If it("date") = datum Then
                         Try
-                            txtData.Text &= $"Total Vaccinations: {it("total_vaccinations")}{vbNewLine}"
+                            txtData.Text &= $"Total Vaccinations: {it("total_vaccinations")}{vbCrLf}"
                         Catch ex As Exception
                         End Try
                         Try
-                            txtData.Text &= $"People Vaccinated: {it("people_vaccinated")}{vbNewLine}"
+                            txtData.Text &= $"People Vaccinated: {it("people_vaccinated")}{vbCrLf}"
                         Catch ex As Exception
                         End Try
                         Try
-                            txtData.Text &= $"Daily Vaccinations: {it("daily_vaccinations")}{vbNewLine}"
+                            txtData.Text &= $"Daily Vaccinations: {it("daily_vaccinations")}{vbCrLf}"
                         Catch ex As Exception
                         End Try
                         Try
-                            txtData.Text &= $"Total Vaccinations Per 100: {it("total_vaccinations_per_hundred")}{vbNewLine}"
+                            txtData.Text &= $"Total Vaccinations Per 100: {it("total_vaccinations_per_hundred")}{vbCrLf}"
                         Catch ex As Exception
                         End Try
                         Try
-                            txtData.Text &= $"People Vaccinated Per 100: {it("people_vaccinated_per_hundred")}{vbNewLine}"
+                            txtData.Text &= $"People Vaccinated Per 100: {it("people_vaccinated_per_hundred")}{vbCrLf}"
                         Catch ex As Exception
                         End Try
                         Try
-                            txtData.Text &= $"Daily Vaccinations Per Million: {it("daily_vaccinations_per_million")}{vbNewLine}"
+                            txtData.Text &= $"Daily Vaccinations Per Million: {it("daily_vaccinations_per_million")}{vbCrLf}"
                         Catch ex As Exception
                         End Try
                         Return
@@ -92,7 +90,6 @@ Public Class Form1
             landen.Add(item("country").ToString)
         Next
         fillLanden(landen)
-
     End Sub
     Sub clearAllData()
         cboLand.ResetText()
